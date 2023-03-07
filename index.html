@@ -5,7 +5,7 @@
         <title>Wordle</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-
+        
         <link rel="stylesheet" href="wordle.css">
         <script src="wordle.js"></script>
     </head>
@@ -16,8 +16,30 @@
         <br>
         <div id="board">
         </div>
-
+        <div class="popup_container" id="popup">
+            <div class="pop_up" id="popup">
+                <form>
+                    <legend>วิธีการเล่นเบื้องต้น</legend>
+                    <p>Wordle คือ เกมทายคำศัพท์ภาษาอังกฤษ โดยจะต้องพิมพ์คำศัพท์ความยาว 5 ตัว โดยจะมีผลลัพธ์ 3 แบบคือ</p>
+                    <img src="https://i.imgur.com/87SLy6O.png" alt="green">
+                    <p>สีเขียว คือ มีอักษรตัวนั้นอยู่ในคำ และ ถูกตำแหน่งแล้ว</p>
+                    <img src="https://i.imgur.com/kJKbSx7.png" alt="yellow">
+                    <p>สีเหลือง คือ มีตัวอักษรนั้นอยู่ในคำ แต่ยังผิดตำแหน่งอยู่</p>
+                    <img src="https://i.imgur.com/1BbNG7r.png" alt="gray">
+                    <p>สีเทา คือ มีความหมายว่า ไม่มีตัวอักษรตัวนั้นอยู่ในคำ</p>
+                    <p>เมื่อได้ผลลัพธ์แล้ว ก็ต้องทายต่อไปจนกว่าจะได้คำที่ถูกต้อง หรือเป็นสีเขียวทั้ง 5 ช่อง มีโอกาสในการทายได้สูงสุด 6 ครั้ง ซึ่งหากครบ 6 ครั้งแล้วยังทายไม่ถูก เกมก็จะเฉลยคำตอบให้</p>
+                </form>
+                <button type="button" onclick="closepopup()">ฉันเข้าใจแล้ว</button>
+            </div>
+        </div>
         <br>
         <h1 id="answer"></h1>
     </body>
+<script>
+    let popup = document.getElementById("popup");
+
+function closepopup(){
+    popup.classList.add("close-popup")
+}
+</script>
 </html>
